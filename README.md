@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PetSocialNetwork
 
-## Getting Started
+## ¿Qué es PetSocialNetwork-Front?
+Este es el repositorio del frontend de nuestra red social para mascotas. ¡Únete a nosotros para crear una comunidad donde las mascotas y sus dueños puedan conectarse!
 
-First, run the development server:
+Nuestra visión es crear una plataforma donde las mascotas sean los protagonistas. Queremos construir una comunidad donde los perros, gatos y otros animales de compañía puedan compartir sus aventuras, encontrar nuevos amigos y conectar con sus dueños de una manera única y auténtica.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ¿Cómo funcionará?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Perfil de mascota: Cada mascota tendrá su propio perfil, donde los dueños podrán compartir fotos, videos y historias desde el punto de vista de la mascota.
+2. Feed personalizado: Al iniciar sesión, los usuarios verán un feed con las publicaciones de las mascotas que siguen, creando una experiencia inmersiva y personalizada.
+3. Adopción y ventas: Las mascotas en adopción o venta podrán crear publicaciones en primera persona, como si estuvieran buscando un nuevo hogar.
+4. Guía de cuidados: Ofreceremos una sección con consejos y guías sobre cómo cuidar a las mascotas, desde la alimentación hasta el entrenamiento.
+5. Directorio de veterinarias: Ayudaremos a los usuarios a encontrar veterinarias cercanas, con información de contacto y ubicación.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ¿Qué hace única nuestra red social?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Enfoque en la mascota: La mascota es el centro de atención, no el dueño.
+2. Experiencia inmersiva: Los usuarios se sumergirán en el mundo de sus mascotas.
+3. Comunidad: Fomentaremos la interacción entre los dueños de mascotas y sus animales.
+4. Información útil: Proporcionaremos recursos valiosos para el cuidado de las mascotas.
 
-## Learn More
+## ¿Cómo contribuir?
 
-To learn more about Next.js, take a look at the following resources:
+1. **Forkea este repositorio:** Haz clic en el botón "Fork" en la parte superior derecha de esta página para crear tu propia copia del repositorio.
+2. **Clona tu fork:**
+   ```bash
+   git clone [https://github.com/tu_usuario/PetSocialNetwork-Front.git](https://www.google.com/search?q=https://github.com/tu_usuario/PetSocialNetwork-Front.git)
+   ```
+   Reemplaza tu_usuario con tu nombre de usuario de GitHub.
+3. Crea una nueva rama en tu copia del repositorio, el nombre de la rama deberá ser un nombre descriptivo y significativo:
+   ```bash
+   git checkout -b mi-rama
+   ```
+4. Realiza tus cambios en la rama que acabas de crear.
+5. **Sube tus cambios:**
+   ```bash
+   git add .
+   git commit -m "Mensaje descriptivo de tus cambios"
+   git push origin mi-rama
+   ```
+6. Enviaremos tus cambios a la rama principal del repositorio. ¡Gracias por tu contribución!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ¿Cómo ejecutar el proyecto localmente?
+1. **Instala las dependencias:**
+   ```npm install```
+2. **Inicia el servidor:**
+   ```npm run dev```
+3. **Accede a la aplicación en tu navegador:**
+   ```http://localhost:3000```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tecnologías utilizadas
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Shadcn UI
+- Lucide React
 
-## Deploy on Vercel
+## !Únete a la comunidad!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue. ¡Estamos emocionados de trabajar contigo!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Para los desarrolladores
+
+1. Desarrollo de funcionalidades: Ayuda a construir las diferentes secciones de la plataforma, desde el perfil de la mascota hasta el directorio de veterinarias.
+2. Diseño de la interfaz: Crea una interfaz intuitiva y atractiva que refleje la personalidad de nuestras mascotas.
+3. Contenido: Genera contenido de calidad para la sección de cuidados y consejos.
+
+¡Y muchas ideas más! Somos abiertos a todas las sugerencias y propuestas que ayuden a mejorar nuestra plataforma.
+¡Únete a nosotros y sé parte de esta aventura!
+
+Recuerda:
+
+Este es solo el comienzo: Estamos abiertos a nuevas ideas y mejoras.
+Colabora y comparte: Trabajemos juntos para crear una comunidad única y especial.
+Diviértete: ¡Lo más importante es disfrutar del proceso y crear algo increíble!
+¡Esperamos tu participación!
+
+Consejos adicionales:
+
+Utiliza un tono amigable y cercano.
+Incluye imágenes o GIFs de mascotas para hacer el anuncio más atractivo.
+Crea un hashtag para el proyecto.
+Promociona el proyecto en tus redes sociales.
+
+### ¡Súmate a nuestra aventura y ayuda a construir la mejor red social para mascotas!
