@@ -1,13 +1,15 @@
-import { Header } from "./components/Header";
+import PetPost          from "./components/Dashboard/PetPost";
+import { petsPost }     from "./data/pets-post"
 
 
 export default function Home() {
-  return (
-    <>
-    <Header />
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        Pets
-    </div>
-    </>
-  );
+    return (
+        <div className="container mx-auto p-4">
+            <div className="space-y-6">
+                {petsPost.map((post) => (
+                    <PetPost key={post.id} post={post} />
+                ))}
+            </div>
+        </div>
+    );
 }

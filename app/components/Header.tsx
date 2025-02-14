@@ -16,12 +16,12 @@ export function Header() {
     const currentPet = pets[0];
 
     return (
-        <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <div className="bg-primary p-2 rounded-full">
+                        <div className="bg-purple-500 p-2 rounded-full">
                             <Paw className="h-6 w-6 text-primary-foreground" />
                         </div>
                         <span className="text-xl font-bold">PetSocial</span>
