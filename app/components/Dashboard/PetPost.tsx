@@ -14,7 +14,9 @@ import {
     AvatarImage,
     Button,
     Input
-} from "@/components/ui"
+}                   from "@/components/ui"
+import CountUp      from "@/app/components/Animations/CountUp/CountUp"
+import FadeContent  from "../Animations/FadeContent/FadeContent"
 
 interface Comment {
     id: number
@@ -44,11 +46,11 @@ export default function PetPost({ post }: { post: Post }) {
     const handleComment = (e: React.FormEvent) => {
         e.preventDefault()
 
-        if (newComment.trim()) {
+        if ( newComment.trim() ) {
             const comment = {
-                id: comments.length + 1,
-                userName: "CurrentUser", // Esto vendría del usuario autenticado
-                content: newComment,
+                id          : comments.length + 1,
+                userName    : "CurrentUser", // Esto vendría del usuario autenticado
+                content     : newComment,
             }
             setComments([...comments, comment])
             setNewComment("")
@@ -84,21 +86,45 @@ export default function PetPost({ post }: { post: Post }) {
                 <div className="flex items-center space-x-4 w-full">
                     <Button variant="ghost" size="sm" onClick={handleLike}>
                         <Heart className="mr-2 h-4 w-4" />
-                        {likes}
+
+                        <CountUp
+                            from        = { 0 }
+                            to          = { likes }
+                            separator   = "."
+                            direction   = "up"
+                            duration    = { 1 }
+                            className   = "count-up-text"
+                        />
                     </Button>
 
                     <Button variant="ghost" size="sm">
                         <MessageCircle className="mr-2 h-4 w-4" />
-                        {comments.length}
+
+                        <CountUp
+                            from        = { 0 }
+                            to          = { comments.length }
+                            separator   = "."
+                            direction   = "up"
+                            duration    = { 1 }
+                            className   = "count-up-text"
+                        />
                     </Button>
                 </div>
 
                 <div className="w-full">
                     {comments.map((comment) => (
-                        <div key={comment.id} className="mb-2">
-                        <span className="font-semibold">{comment.userName}: </span>
-                        {comment.content}
-                        </div>
+                        <FadeContent
+                            key             = { comment.id }
+                            blur            = { false }
+                            duration        = { 1000 }
+                            easing          = "ease-out"
+                            initialOpacity  = { 0 }
+                        >
+                            <div className="mb-2">
+                                <span className="font-semibold">{comment.userName}: </span>
+                                {comment.content}
+                            </div>
+                        </FadeContent>
                     ))}
                 </div>
 

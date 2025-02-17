@@ -9,6 +9,7 @@ import {
     TabsTrigger
 }               from '@/components/ui/tabs';
 import TipCard  from '../components/Care/TipCard';
+import FadeContent from '../components/Animations/FadeContent/FadeContent';
 
 
 const careGuides = {
@@ -92,19 +93,43 @@ export default function CarePage() {
 
                     <TabsContent value="basic" className="space-y-6">
                         {careGuides.basic.map((guide, index) => (
-                            <TipCard {...guide} key={index} />
+                            <FadeContent
+                                key             = { index }
+                                blur            = { false }
+                                duration        = { 1000 }
+                                easing          = "ease-out"
+                                initialOpacity  = { 0 }
+                            >
+                                <TipCard {...guide} />
+                            </FadeContent>
                         ))}
                     </TabsContent>
 
                     <TabsContent value="health" className="space-y-6">
                         {careGuides.health.map((guide, index) => (
-                            <TipCard {...guide} key={index} />
+                            <FadeContent
+                                key             = { index }
+                                blur            = { false }
+                                duration        = { 1000 }
+                                easing          = "ease-out"
+                                initialOpacity  = { 0 }
+                            >
+                                <TipCard {...guide} />
+                            </FadeContent>
                         ))}
                     </TabsContent>
 
                     <TabsContent value="training" className="space-y-6">
                         {careGuides.training.map((guide, index) => (
-                            <TipCard {...guide} key={index} />
+                            <FadeContent
+                                key             = { index }
+                                blur            = { false }
+                                duration        = { 1000 }
+                                easing          = "ease-out"
+                                initialOpacity  = { 0 }
+                            >
+                                <TipCard {...guide} />
+                            </FadeContent>
                         ))}
                     </TabsContent>
                 </Tabs>

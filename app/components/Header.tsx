@@ -6,10 +6,11 @@ import Image from 'next/image';
 
 import { Bell, MessageCircle, Search, PawPrint as Paw } from 'lucide-react';
 
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Avatar } from '@/components/ui/avatar';
-import { pets } from '../data/pets';
+import { Input }    from '@/components/ui/input';
+import { Button }   from '@/components/ui/button';
+import { Avatar }   from '@/components/ui/avatar';
+import { pets }     from '../data/pets';
+import CountUp      from '@/app/components/Animations/CountUp/CountUp';
 
 export function Header() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -47,7 +48,13 @@ export function Header() {
                         <Button variant="ghost" size="icon" className="relative">
                             <Bell className="h-5 w-5" />
                             <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-destructive text-[10px] font-medium flex items-center justify-center text-destructive-foreground">
-                                3
+                                <CountUp
+                                    from        = { 0 }
+                                    to          = { 3 }
+                                    separator   = "."
+                                    direction   = "up"
+                                    duration    = { 1 }
+                                />
                             </span>
                         </Button>
 

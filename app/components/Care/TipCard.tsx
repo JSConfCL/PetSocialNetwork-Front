@@ -15,7 +15,7 @@ export default function TipCard(
     guide: Tip,
 ): JSX.Element {
     return (
-        <Card  className="p-6">
+        <Card className="p-6 shadow-md">
             <div className="flex items-start gap-4">
                 <div className="p-3 bg-primary/10 rounded-lg">
                     { guide.icon }

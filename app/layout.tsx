@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
-import { Header } from "./components/Header";
-import { Menu } from "./components/Menu";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
+import { Header }   from "./components/Header";
+import { Menu }     from "./components/Menu";
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-    title: "PetSocialNetwork",
-    description: "Una red social para mascotas",
+    title       : "PetSocialNetwork",
+    description : "Una red social para mascotas",
 };
+
 
 export default function RootLayout({
     children,
@@ -26,9 +19,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="es">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
+            <body>
                 <Header />
 
                 <div className="container mx-auto p-4">
