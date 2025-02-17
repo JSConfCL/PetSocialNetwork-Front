@@ -27,7 +27,7 @@ export function Menu() {
                         Veterinarias
                     </Link>
 
-                    <Link href="/veterinaries" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-secondary">
+                    <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-secondary">
                         <PawPrint strokeWidth={1.5} />
                         Hogares
                     </Link>
