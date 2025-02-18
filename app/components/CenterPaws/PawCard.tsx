@@ -12,7 +12,7 @@ export default function VeterinaryCard(
     vet: Veterinary
 ): JSX.Element {
     return (
-        <Card key={vet.id} className="overflow-hidden shadow-md hover:scale-[1.01] transition-transform duration-300">
+        <Card key={vet.id} className="hover:scale-[1.01]">
             <header className="relative h-48">
                 <Image
                     fill

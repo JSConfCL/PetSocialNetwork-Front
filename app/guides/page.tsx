@@ -80,12 +80,12 @@ const careGuides = {
 
 export default function CarePage() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+        <main className="min-h-screen bg-transparent">
             <div className="container mx-auto px-4 py-8">
                 <h1 className="text-3xl font-bold mb-8">Guía de Cuidados 🐾</h1>
 
                 <Tabs defaultValue="basic" className="space-y-6">
-                    <TabsList className="grid w-full grid-cols-3">
+                    <TabsList className="grid w-full grid-cols-3 bg-purple-100 dark:bg-purple-950">
                         <TabsTrigger value="basic">Cuidados Básicos</TabsTrigger>
                         <TabsTrigger value="health">Salud</TabsTrigger>
                         <TabsTrigger value="training">Entrenamiento</TabsTrigger>

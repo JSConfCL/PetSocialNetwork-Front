@@ -1,23 +1,40 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import Link         from 'next/link';
+import Image        from 'next/image';
 
-import { Bell, MessageCircle, Search, PawPrint as Paw } from 'lucide-react';
 
-import { Input }    from '@/components/ui/input';
-import { Button }   from '@/components/ui/button';
-import { Avatar }   from '@/components/ui/avatar';
-import { pets }     from '../data/pets';
-import CountUp      from '@/app/components/Animations/CountUp/CountUp';
+import {
+    Bell,
+    MessageCircle,
+    Search,
+    PawPrint as Paw,
+    Moon,
+    Sun
+}                   from 'lucide-react';
+import { useTheme } from "next-themes"
+
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+    Input,
+    Button,
+    Avatar
+}               from "@/components/ui"
+import { pets } from '../data/pets';
+import CountUp  from '@/app/components/Animations/CountUp/CountUp';
+
 
 export function Header() {
     const [searchQuery, setSearchQuery] = useState('');
     const currentPet = pets[0];
 
+    const { setTheme } = useTheme()
     return (
-        <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
+        <header className="border-b bg-white dark:bg-[#10061d] backdrop-blur supports-[backdrop-filter]:bg-background shadow-md shadow-purple-100 dark:shadow-none">
             <div className="container mx-auto px-4">
                 <div className="flex h-16 items-center justify-between">
                     {/* Logo */}
@@ -77,6 +94,27 @@ export function Header() {
                                 {currentPet.name}
                             </span>
                         </div>
+
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button variant="outline" size="icon">
+                                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                                <span className="sr-only">Toggle theme</span>
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                                <DropdownMenuItem onClick={() => setTheme("light")}>
+                                Light
+                                </DropdownMenuItem>
+                                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                                Dark
+                                </DropdownMenuItem>
+                                <DropdownMenuItem onClick={() => setTheme("system")}>
+                                System
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                     </div>
                 </div>
             </div>

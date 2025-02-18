@@ -14,13 +14,13 @@ export default function AdotionSalesCard(
     pet: Pet
 ): JSX.Element {
     return (
-        <Card key={pet.id} className="overflow-hidden shadow-md hover:scale-[1.01] transition-transform duration-300">
+        <Card key={pet.id} className="overflow-hidden hover:scale-[1.01]">
             <div className="relative h-64">
                 <Image
-                    src={pet.image}
-                    alt={pet.name}
                     fill
-                    className="object-cover"
+                    src         = { pet.image }
+                    alt         = { pet.name }
+                    className   = "object-cover"
                 />
 
                 <Badge
@@ -70,7 +70,7 @@ export default function AdotionSalesCard(
                         </div>
                     )}
 
-                    <div className="bg-secondary rounded-lg p-4 italic text-sm text-purple-500">
+                    <div className="bg-gray-100 dark:bg-gray-950 rounded-lg p-4 italic text-sm text-purple-500">
                         "{pet.message}"
                     </div>
                 </div>

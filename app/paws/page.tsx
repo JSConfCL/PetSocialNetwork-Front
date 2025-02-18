@@ -1,15 +1,15 @@
 'use client';
 
 import { veterinaries } from '../data/veterinaries';
-import VeterinaryCard   from '../components/Veterinaries/VeterinaryCard';
+import VeterinaryCard   from '../components/CenterPaws/PawCard';
 import FadeContent      from '@/app/components/Animations/FadeContent/FadeContent';
 
 
 export default function VeterinariesPage() {
     return (
-        <main className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+        <main className="min-h-screen bg-transparent">
             <div className="container mx-auto px-4 py-8">
-                <h1 className="text-3xl font-bold mb-8">Veterinarias Cercanas 🏥</h1>
+                <h1 className="text-3xl font-bold mb-8">Centro de Patitas 🏥</h1>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Mapa */}

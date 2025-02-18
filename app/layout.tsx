@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Header }   from "./components/Header";
-import { Menu }     from "./components/Menu";
+import { Header }           from "./components/Header";
+import { Menu }             from "./components/Menu/Menu";
+import { PawBackground }    from "./components/PawBackground";
+import { ThemeProvider }    from "./components/theme-provider";
 
 
 export const metadata: Metadata = {
@@ -20,17 +22,26 @@ export default function RootLayout({
     return (
         <html lang="es">
             <body>
-                <Header />
+                <ThemeProvider
+                    attribute       = "class"
+                    defaultTheme    = "system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <PawBackground />
 
-                <div className="container mx-auto p-4">
-                    <div className="flex flex-col lg:flex-row gap-6">
-                        <Menu />
+                    <Header />
 
-                        <div className="flex-1">
-                            {children}
+                    <div className="container mx-auto p-4">
+                        <div className="flex flex-col lg:flex-row gap-6">
+                            <Menu />
+
+                            <div className="flex-1 z-20">
+                                { children }
+                            </div>
                         </div>
                     </div>
-                </div>
+                </ThemeProvider>
             </body>
         </html>
     );
