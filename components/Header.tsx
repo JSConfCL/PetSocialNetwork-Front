@@ -22,10 +22,10 @@ import {
     DropdownMenuTrigger,
     Input,
     Button,
-    Avatar
-}               from "@/components/ui"
-import { pets } from '../data/pets';
-import CountUp  from '@/app/components/Animations/CountUp/CountUp';
+    Avatar,
+    CountUp
+}               from "@/components/"
+import { pets } from '@/data';
 
 
 export function Header() {

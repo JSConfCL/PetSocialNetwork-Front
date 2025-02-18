@@ -3,6 +3,7 @@
 	Installed from https://reactbits.dev/ts/tailwind/
 	16-02-2025
 */
+'use client';
 
 import { useEffect, useRef } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
@@ -20,7 +21,7 @@ interface CountUpProps {
     onEnd?: () => void;
 }
 
-export default function CountUp({
+export function CountUp({
     to,
     from = 0,
     direction = "up",

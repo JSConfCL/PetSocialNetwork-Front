@@ -4,13 +4,11 @@ import Image from 'next/image';
 
 import { Heart, DollarSign } from 'lucide-react';
 
-import { Card }     from "@/components/ui/card";
-import { Badge }    from "@/components/ui/badge";
-import { Pet }      from "../../models/pet.model";
-import CountUp      from "@/app/components/Animations/CountUp/CountUp";
+import { Card, CountUp, Badge } from "@/components/";
+import { Pet }                  from "@/models";
 
 
-export default function AdotionSalesCard(
+export function AdoptionSalesCard(
     pet: Pet
 ): JSX.Element {
     return (

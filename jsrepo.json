@@ -8,7 +8,7 @@
 	"configFiles": {},
 	"paths": {
 		"*": "./src/blocks",
-		"TextAnimations": "./app/components/Animations",
-		"Animations": "./app/components/Animations"
+		"TextAnimations": "./components/Animations",
+		"Animations": "./components/Animations"
 	}
 }

@@ -1,11 +1,10 @@
 'use client';
 
-import { veterinaries } from '../data/veterinaries';
-import VeterinaryCard   from '../components/CenterPaws/PawCard';
-import FadeContent      from '@/app/components/Animations/FadeContent/FadeContent';
+import { veterinaries }         from '@/data';
+import { FadeContent, PawCard } from '@/components/';
 
 
-export default function VeterinariesPage() {
+export default function PawsPage() {
     return (
         <main className="min-h-screen bg-transparent">
             <div className="container mx-auto px-4 py-8">
@@ -45,7 +44,7 @@ export default function VeterinariesPage() {
                                 easing          = "ease-out"
                                 initialOpacity  = { 0 }
                             >
-                                <VeterinaryCard key={vet.id} {...vet} />
+                                <PawCard key={vet.id} {...vet} />
                             </FadeContent>
                         ))}
                     </div>

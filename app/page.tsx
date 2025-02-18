@@ -1,8 +1,7 @@
 'use client'
 
-import PetPost      from "./components/Dashboard/PetPost";
-import { petsPost } from "./data/pets-post"
-import FadeContent  from "@/app/components/Animations/FadeContent/FadeContent";
+import { petsPost }             from "@/data"
+import { PetPost, FadeContent } from "@/components/";
 
 
 export default function Home() {

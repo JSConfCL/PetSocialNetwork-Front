@@ -1,6 +1,6 @@
 import { JSX } from "react";
 
-import { Card } from "@/components/ui";
+import { Card } from "@/components/";
 
 
 type Tip = {
@@ -11,7 +11,7 @@ type Tip = {
 }
 
 
-export default function TipCard(
+export function TipCard(
     guide: Tip,
 ): JSX.Element {
     return (

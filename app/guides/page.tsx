@@ -6,10 +6,10 @@ import {
     Tabs,
     TabsContent,
     TabsList,
-    TabsTrigger
-}               from '@/components/ui/tabs';
-import TipCard  from '../components/Care/TipCard';
-import FadeContent from '../components/Animations/FadeContent/FadeContent';
+    TabsTrigger,
+    FadeContent,
+    TipCard
+} from '@/components/';
 
 
 const careGuides = {

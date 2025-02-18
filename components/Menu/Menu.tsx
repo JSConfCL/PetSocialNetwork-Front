@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 
 import { BookOpen, Heart, Home, PawPrint, PlusCircle } from "lucide-react";
 
-import FadeContent  from "../Animations/FadeContent/FadeContent";
-import { MenuItem } from "./MenuItem";
-import { Button }   from "@/components/ui";
+import { Button, FadeContent, MenuItem } from "@/components/";
 
 
 export function Menu() {

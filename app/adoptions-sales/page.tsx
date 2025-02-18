@@ -1,8 +1,10 @@
 'use client';
 
-import { pets }         from '../data/pets';
-import AdotionSalesCard from '../components/AdoptionsSales/AdotionSalesCard';
-import FadeContent      from '@/app/components/Animations/FadeContent/FadeContent';
+import {
+    FadeContent,
+    AdoptionSalesCard
+}               from '@/components/';
+import { pets } from '@/data';
 
 
 export default function AdoptionsSalesPage() {
@@ -20,7 +22,7 @@ export default function AdoptionsSalesPage() {
                             easing          = "ease-out"
                             initialOpacity  = { 0 }
                         >
-                            <AdotionSalesCard
+                            <AdoptionSalesCard
                                 key={pet.id}
                                 {...pet}
                             />

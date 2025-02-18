@@ -3,6 +3,7 @@
 	Installed from https://reactbits.dev/ts/tailwind/
 	16-02-2025
 */
+'use client';
 
 import { useRef, useEffect, useState, ReactNode } from "react";
 
@@ -17,7 +18,7 @@ interface FadeContentProps {
   className?: string;
 }
 
-const FadeContent: React.FC<FadeContentProps> = ({
+export const FadeContent: React.FC<FadeContentProps> = ({
   children,
   blur = false,
   duration = 1000,
@@ -65,5 +66,3 @@ const FadeContent: React.FC<FadeContentProps> = ({
     </div>
   );
 };
-
-export default FadeContent;

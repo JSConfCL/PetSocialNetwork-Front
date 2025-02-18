@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 import { Star, Clock, Phone } from 'lucide-react';
 
-import { Veterinary }   from "@/app/models/veterinary";
-import { Card }         from "@/components/ui/card";
+import { Veterinary }   from "@/models";
+import { Card }         from "@/components/";
 
 
-export default function VeterinaryCard(
+export function PawCard(
     vet: Veterinary
 ): JSX.Element {
     return (

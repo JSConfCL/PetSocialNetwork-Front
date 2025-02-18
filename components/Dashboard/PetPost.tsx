@@ -13,10 +13,10 @@ import {
     AvatarFallback,
     AvatarImage,
     Button,
-    Input
-}                   from "@/components/ui"
-import CountUp      from "@/app/components/Animations/CountUp/CountUp"
-import FadeContent  from "../Animations/FadeContent/FadeContent"
+    Input,
+    CountUp,
+    FadeContent
+} from "@/components/"
 
 interface Comment {
     id: number
@@ -34,7 +34,7 @@ interface Post {
     comments: Comment[]
 }
 
-export default function PetPost({ post }: { post: Post }) {
+export function PetPost({ post }: { post: Post }) {
     const [likes, setLikes]             = useState( post.likes );
     const [comments, setComments]       = useState( post.comments );
     const [newComment, setNewComment]   = useState( "" );

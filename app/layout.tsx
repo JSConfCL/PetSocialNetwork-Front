@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Header }           from "./components/Header";
-import { Menu }             from "./components/Menu/Menu";
-import { PawBackground }    from "./components/PawBackground";
-import { ThemeProvider }    from "./components/theme-provider";
+import { Header, Menu, PawBackground, ThemeProvider } from "@/components/";
 
 
 export const metadata: Metadata = {
