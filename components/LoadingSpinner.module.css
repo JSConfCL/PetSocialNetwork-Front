@@ -1,0 +1,26 @@
+.loadingSpinner {
+  height: 5rem;
+  width: 5rem;
+  border: 5px solid var(--spinner-primary-color);
+  border-top-color: var(--spinner-secondary-color);
+  border-radius: 50%;
+  margin: 2rem auto;
+  animation: loadingSpinner 1s linear infinite;
+}
+
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.editingSpinner {
+  height: 0.7rem;
+  width: 0.7rem;
+  margin: 0;
+  border: 1px solid var(--spinner-primary-color);
+  border-top-color: var(--spinner-secondary-color);
+}
