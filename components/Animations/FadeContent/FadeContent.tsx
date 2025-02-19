@@ -1,7 +1,9 @@
+"use client";
+
 /*
-	jsrepo 1.36.0
-	Installed from https://reactbits.dev/ts/tailwind/
-	16-02-2025
+jsrepo 1.36.0
+Installed from https://reactbits.dev/ts/tailwind/
+16-02-2025
 */
 
 import { useRef, useEffect, useState, ReactNode } from "react";
@@ -43,7 +45,7 @@ const FadeContent: React.FC<FadeContentProps> = ({
           }, delay);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     observer.observe(element);
@@ -58,7 +60,7 @@ const FadeContent: React.FC<FadeContentProps> = ({
       style={{
         opacity: inView ? 1 : initialOpacity,
         transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
-        filter: blur ? (inView ? 'blur(0px)' : 'blur(10px)') : 'none',
+        filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
       }}
     >
       {children}
