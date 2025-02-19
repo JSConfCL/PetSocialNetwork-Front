@@ -1,6 +1,7 @@
 # PetSocialNetwork
 
 ## ¿Qué es PetSocialNetwork-Front?
+
 Este es el repositorio del frontend de nuestra red social para mascotas. ¡Únete a nosotros para crear una comunidad donde las mascotas y sus dueños puedan conectarse!
 
 Nuestra visión es crear una plataforma donde las mascotas sean los protagonistas. Queremos construir una comunidad donde los perros, gatos y otros animales de compañía puedan compartir sus aventuras, encontrar nuevos amigos y conectar con sus dueños de una manera única y auténtica.
@@ -42,14 +43,16 @@ Nuestra visión es crear una plataforma donde las mascotas sean los protagonista
 6. Enviaremos tus cambios a la rama principal del repositorio. ¡Gracias por tu contribución!
 
 ## ¿Cómo ejecutar el proyecto localmente?
+
 1. **Instala las dependencias:**
-   ```npm install```
+   `npm install`
 2. **Inicia el servidor:**
-   ```npm run dev```
+   `npm run dev`
 3. **Accede a la aplicación en tu navegador:**
-   ```http://localhost:3000```
+   `http://localhost:3000`
 
 ## Tecnologías utilizadas
+
 - Next.js
 - Tailwind CSS
 - TypeScript
