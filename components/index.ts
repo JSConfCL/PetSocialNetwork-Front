@@ -23,7 +23,6 @@ export * from "./PawBackground";
 
 export * from "./Header";
 export * from "./PawBackground";
-export * from "./theme-provider";
 
 // Shadcn
 export * from "./ui";
