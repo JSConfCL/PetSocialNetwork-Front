@@ -1,10 +1,11 @@
+import { Star, Clock, Phone } from 'lucide-react';
+import Image from 'next/image';
 import { JSX } from "react";
 
-import Image from 'next/image';
-
-import { Star, Clock, Phone } from 'lucide-react';
-
 import { Veterinary }   from "@/models";
+
+
+
 import { Card }         from "@/components/";
 
 

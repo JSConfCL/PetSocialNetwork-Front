@@ -1,10 +1,11 @@
 'use client';
 
+import { pets } from '@/data';
+
 import {
     FadeContent,
     AdoptionSalesCard
 }               from '@/components/';
-import { pets } from '@/data';
 
 
 export default function AdoptionsSalesPage() {
