@@ -1,8 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-import Link         from 'next/link';
-import Image        from 'next/image';
 
 
 import {
@@ -14,6 +11,11 @@ import {
     Sun
 }                   from 'lucide-react';
 import { useTheme } from "next-themes"
+import Image        from 'next/image';
+import Link         from 'next/link';
+import { useState } from 'react';
+
+import { pets } from '@/data';
 
 import {
     DropdownMenu,
@@ -25,7 +27,6 @@ import {
     Avatar,
     CountUp
 }               from "@/components/"
-import { pets } from '@/data';
 
 
 export function Header() {

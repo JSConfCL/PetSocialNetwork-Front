@@ -1,6 +1,7 @@
 'use client';
 
 import { veterinaries }         from '@/data';
+
 import { FadeContent, PawCard } from '@/components/';
 
 

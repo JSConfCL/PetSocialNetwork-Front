@@ -1,6 +1,7 @@
 'use client'
 
 import { petsPost }             from "@/data"
+
 import { PetPost, FadeContent } from "@/components/";
 
 
