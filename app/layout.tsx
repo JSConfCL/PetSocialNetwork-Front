@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-
 import "./globals.css";
 
-import { Header, Menu, PawBackground, ThemeProvider } from "@/components/";
+import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
+
+import { Header, Menu, PawBackground } from "@/components/";
 
 export const metadata: Metadata = {
   title: "PetSocialNetwork",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <PawBackground />
