@@ -75,7 +75,14 @@ export function PetPost({ post }: { post: Post }) {
       <CardContent>
         <p className="mb-4">{post.content}</p>
 
-        <Image src={post.imageUrl || "/placeholder.svg"} alt={`${post.petName}'s post`} className="w-full rounded-lg" />
+        <div className="relative h-96 w-full overflow-hidden rounded-lg">
+          <Image
+            fill
+            src={post.imageUrl || "/placeholder.svg"}
+            alt={`${post.petName}'s post`}
+            className="object-cover"
+          />
+        </div>
 
         <div className="flex items-center">
           <div className="mt-2 flex w-full items-center space-x-2 text-purple-500">
