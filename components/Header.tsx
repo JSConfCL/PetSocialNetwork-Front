@@ -65,7 +65,10 @@ export function Header() {
               </Button>
 
               <Button variant="ghost" size="icon">
+                <Link href="/chat">
                 <MessageCircle className="h-5 w-5" />
+                
+                </Link>
               </Button>
 
               <div className="flex items-center gap-2">
