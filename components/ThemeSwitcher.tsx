@@ -55,7 +55,7 @@ export function ThemeSwitcher() {
           ) : null
         )}
       </SelectTrigger>
-      <SelectContent align="center">
+      <SelectContent align="center" className="dark:bg-[#10061d]">
         {themes.map(({ Icon, value, label }) => (
           <SelectItem key={value} value={value}>
             <div className="flex w-full items-center justify-center gap-2">

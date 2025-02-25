@@ -48,7 +48,7 @@ export function UserOptionsPopover({ currentPet }: UserOptionsPopoverProps) {
           </Avatar>
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent className="bg-white dark:bg-[#10061d]">
         <DropdownMenuLabel className="flex items-center gap-2">
           <span>{currentPet.name}</span>
           <Avatar className="h-8 w-8">
