@@ -2,7 +2,7 @@
 
 import { pets } from "@/data";
 
-import { FadeContent, AdoptionSalesCard } from "@/components/";
+import { FadeContent, AdoptionSalesCard } from "@/components";
 
 export default function AdoptionsSalesPage() {
   return (

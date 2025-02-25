@@ -2,7 +2,7 @@
 
 import { petsPost } from "@/data";
 
-import { PetPost, FadeContent } from "@/components/";
+import { PetPost, FadeContent } from "@/components";
 
 export default function Home() {
   return (

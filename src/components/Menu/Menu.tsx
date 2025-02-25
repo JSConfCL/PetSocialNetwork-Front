@@ -3,7 +3,7 @@
 import { BookOpen, Heart, Home, PawPrint, PlusCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Button, FadeContent, MenuItem } from "@/components/";
+import { Button, FadeContent, MenuItem } from "@/components";
 
 export function Menu() {
   const [active, setActive] = useState<string>("/");

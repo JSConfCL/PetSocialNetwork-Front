@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, MessageCircle, PawPrint } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 import {
@@ -15,7 +16,7 @@ import {
   Input,
   CountUp,
   FadeContent
-} from "@/components/";
+} from "@/components";
 
 interface Comment {
   id: number;
@@ -74,7 +75,7 @@ export function PetPost({ post }: { post: Post }) {
       <CardContent>
         <p className="mb-4">{post.content}</p>
 
-        <img src={post.imageUrl || "/placeholder.svg"} alt={`${post.petName}'s post`} className="w-full rounded-lg" />
+        <Image src={post.imageUrl || "/placeholder.svg"} alt={`${post.petName}'s post`} className="w-full rounded-lg" />
 
         <div className="flex items-center">
           <div className="mt-2 flex w-full items-center space-x-2 text-purple-500">

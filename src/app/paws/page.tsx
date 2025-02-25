@@ -2,7 +2,7 @@
 
 import { veterinaries } from "@/data";
 
-import { FadeContent, PawCard } from "@/components/";
+import { FadeContent, PawCard } from "@/components";
 
 export default function PawsPage() {
   return (

@@ -4,7 +4,7 @@ import { JSX } from "react";
 
 import { Pet } from "@/models";
 
-import { Card, CountUp, Badge } from "@/components/";
+import { Card, CountUp, Badge } from "@/components";
 
 export function AdoptionSalesCard(pet: Pet): JSX.Element {
   return (
@@ -48,7 +48,7 @@ export function AdoptionSalesCard(pet: Pet): JSX.Element {
           )}
 
           <div className="rounded-lg bg-gray-100 p-4 text-sm italic text-purple-500 dark:bg-gray-950">
-            "{pet.message}"
+            {`"${pet.message}"`}
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { JSX } from "react";
 
 import { Veterinary } from "@/models";
 
-import { Card } from "@/components/";
+import { Card } from "@/components";
 
 export function PawCard(vet: Veterinary): JSX.Element {
   return (

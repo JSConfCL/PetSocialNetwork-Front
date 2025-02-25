@@ -1,6 +1,6 @@
 import { JSX } from "react";
 
-import { Card } from "@/components/";
+import { Card } from "@/components";
 
 type Tip = {
   title: string;
