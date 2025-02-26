@@ -21,8 +21,8 @@ export * from "./Menu/MenuItem";
 // PawBackground
 export * from "./PawBackground";
 
-export * from "./Header";
-export * from "./HeaderHider";
+export * from "./Header/Header";
+
 export * from "./PawBackground";
 
 // Shadcn
