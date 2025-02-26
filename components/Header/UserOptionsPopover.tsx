@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-import { LogoutButton } from "@/components/LogoutButton";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { LogoutButton } from "@/components/Header/LogoutButton";
+import { ThemeSwitcher } from "@/components/Header/ThemeSwitcher";
 import { Avatar } from "@/components/ui/avatar";
 import {
   DropdownMenu,

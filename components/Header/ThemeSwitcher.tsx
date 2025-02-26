@@ -4,8 +4,8 @@ import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { ComponentType, SVGProps, useEffect, useState } from "react";
 
-import { Select, SelectContent, SelectItem, SelectTrigger } from "./ui/select";
-import { Skeleton } from "./ui/skeleton";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type ThemesType = {
   label: string;

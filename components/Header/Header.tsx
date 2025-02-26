@@ -1,8 +1,8 @@
 import { pets } from "@/data";
 
-import { Logo } from "@/components/Logo";
-import { SearchForm } from "@/components/SearchForm";
-import { UserOptionsPopover } from "@/components/UserOptionsPopover";
+import { Logo } from "@/components/Header/Logo";
+import { SearchForm } from "@/components/Header/SearchForm";
+import { UserOptionsPopover } from "@/components/Header/UserOptionsPopover";
 
 import { HeaderActions } from "./HeaderActions";
 import { HeaderHider } from "./HeaderHider";
