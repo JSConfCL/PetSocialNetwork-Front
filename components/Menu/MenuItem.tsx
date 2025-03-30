@@ -13,7 +13,7 @@ export function MenuItem({ setActive, active, value, href, children }: MenuItemP
   return (
     <Link
       href={href}
-      className={`flex items-center gap-2 ${active === value && "bg-purple-200 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300"} rounded-md p-2 text-purple-500 transition-colors hover:scale-[1.02] hover:bg-purple-100 hover:text-purple-700 active:scale-[0.98] active:bg-purple-200 dark:text-purple-300 dark:hover:bg-purple-950 dark:hover:text-purple-300`}
+      className={`flex items-center gap-2 ${active === value && "bg-purple-200 text-purple-700 dark:bg-purple-950/50 dark:text-purple-300"} rounded-md p-2 text-purple-500 transition-colors hover:scale-[1.02] hover:bg-purple-100 hover:text-purple-700 active:scale-[0.98] active:bg-purple-200 dark:text-purple-300 dark:hover:bg-purple-950/40 dark:hover:text-purple-300`}
       onClick={() => setActive(value)}
     >
       {children}

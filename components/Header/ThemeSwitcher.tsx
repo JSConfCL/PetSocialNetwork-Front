@@ -46,6 +46,7 @@ export function ThemeSwitcher() {
   return (
     <Select defaultValue={theme} onValueChange={setTheme}>
       <SelectTrigger className="mx-auto h-10 w-fit gap-2 border-none shadow-none">
+				Color
         {themes.map(({ value, Icon, label }) =>
           theme === value ? (
             <div key={value} className="flex items-center gap-2">
@@ -57,7 +58,7 @@ export function ThemeSwitcher() {
       </SelectTrigger>
       <SelectContent align="center" className="dark:bg-[#10061d]">
         {themes.map(({ Icon, value, label }) => (
-          <SelectItem key={value} value={value}>
+          <SelectItem key={value} value={value} className=" hover:bg-purple-100 dark:hover:bg-purple-950/20">
             <div className="flex w-full items-center justify-center gap-2">
               <Icon className="size-4" />
               <span>{label}</span>

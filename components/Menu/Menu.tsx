@@ -35,7 +35,7 @@ export function Menu() {
 
   return (
     <FadeContent key={"menu"} blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
-      <div className="z-20 h-fit w-full lg:sticky lg:top-20 lg:w-64">
+      <div className="z-20 h-fit w-full lg:sticky lg:top-20 lg:w-64 backdrop-blur-sm">
         <div className="rounded-lg border border-input bg-white/70 p-4 shadow-md shadow-purple-200 dark:bg-[#10061d]/50 dark:shadow-purple-950">
           <h2 className="text-lg font-semibold text-purple-700">Menú</h2>
 

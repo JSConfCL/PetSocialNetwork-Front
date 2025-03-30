@@ -78,13 +78,13 @@ export function PetPost({ post }: { post: Post }) {
 
         <div className="flex items-center">
           <div className="mt-2 flex w-full items-center space-x-2 text-purple-500">
-            <Button variant="ghost" onClick={handleLike} className="hover:bg-purple-100 hover:text-purple-700">
+            <Button variant="ghost" onClick={handleLike} className="hover:bg-purple-100 dark:hover:bg-purple-950/40 hover:text-purple-700">
               <Heart className="mr-1 h-4 w-4" />
 
               <CountUp from={0} to={likes} separator="." direction="up" duration={1} className="count-up-text" />
             </Button>
 
-            <Button variant="ghost" className="hover:bg-purple-100 hover:text-purple-700">
+            <Button variant="ghost" className="hover:bg-purple-100 dark:hover:bg-purple-950/40 hover:text-purple-700">
               <MessageCircle className="mr-1 h-4 w-4" />
 
               <CountUp
