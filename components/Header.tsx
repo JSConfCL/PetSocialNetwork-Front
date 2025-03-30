@@ -65,9 +65,7 @@ export function Header() {
               </Button>
 
               <Button variant="ghost" size="icon">
-
                 <MessageCircle className="h-5 w-5" />
-
               </Button>
 
               <div className="flex items-center gap-2">
