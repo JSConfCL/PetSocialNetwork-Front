@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Bell, MessageCircle } from "lucide-react";
 
 import { CountUp } from "@/components/Animations/CountUp";
@@ -12,9 +14,12 @@ export function HeaderActions() {
           <CountUp from={0} to={3} separator="." direction="up" duration={1} />
         </span>
       </Button>
-      <Button variant="ghost" size="icon">
+      <Link
+        href="/chat"
+        className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-9 px-3"
+      >
         <MessageCircle className="h-5 w-5" />
-      </Button>
+      </Link>
     </div>
   );
 }
