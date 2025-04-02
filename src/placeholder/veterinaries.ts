@@ -1,4 +1,4 @@
-import { Veterinary } from "../models/veterinary";
+import { Veterinary } from "@/interfaces/veterinary";
 
 export const veterinaries: Veterinary[] = [
   {

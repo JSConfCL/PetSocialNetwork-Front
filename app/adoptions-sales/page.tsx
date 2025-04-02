@@ -1,6 +1,6 @@
 "use client";
 
-import { pets } from "@/data";
+import { pets } from "@/placeholder/pets";
 
 import { FadeContent, AdoptionSalesCard } from "@/components/";
 

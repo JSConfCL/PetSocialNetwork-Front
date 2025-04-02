@@ -2,7 +2,7 @@
 import { BookOpen, Heart, Home, PawPrint } from "lucide-react";
 import { ComponentPropsWithoutRef, useEffect, useState, type ReactElement } from "react";
 
-import { FadeContent, MenuItem } from "@/components/";
+import { FadeContent, MenuItem } from "@/components";
 
 const links = [
   {

@@ -1,6 +1,5 @@
-import Link from "next/link";
-
 import { Bell, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 import { CountUp } from "@/components/Animations/CountUp";
 import { Button } from "@/components/ui/button";

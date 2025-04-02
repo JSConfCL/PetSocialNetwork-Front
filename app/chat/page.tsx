@@ -1,5 +1,6 @@
-import Chat from '@/components/Chat/Chat'
-import React from 'react'
+import React from 'react';
+
+import Chat from '@/components/Chat/Chat';
 
 export default function page() {
   return (
