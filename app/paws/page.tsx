@@ -1,8 +1,8 @@
 "use client";
 
-import { veterinaries } from "@/data";
+import { veterinaries } from "@/placeholder/veterinaries";
 
-import { FadeContent, PawCard } from "@/components/";
+import { FadeContent, PawCard } from "@/components";
 
 export default function PawsPage() {
   return (

@@ -1,10 +1,9 @@
+import { Pet } from "@/interfaces/pet";
 import { Heart, DollarSign } from "lucide-react";
 import Image from "next/image";
-import { JSX } from "react";
+import type { JSX } from "react";
 
-import { Pet } from "@/models";
-
-import { Card, CountUp, Badge } from "@/components/";
+import { Card, CountUp, Badge } from "@/components";
 
 export function AdoptionSalesCard(pet: Pet): JSX.Element {
   return (
@@ -48,7 +47,7 @@ export function AdoptionSalesCard(pet: Pet): JSX.Element {
           )}
 
           <div className="rounded-lg bg-gray-100 p-4 text-sm italic text-purple-500 dark:bg-gray-950">
-            "{pet.message}"
+            &quot;{pet.message}&quot;
           </div>
         </div>
       </div>

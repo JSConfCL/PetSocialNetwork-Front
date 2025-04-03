@@ -2,7 +2,7 @@
 
 import { Heart, Shield, Stethoscope, Dumbbell, Bath, Apple } from "lucide-react";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger, FadeContent, TipCard } from "@/components/";
+import { Tabs, TabsContent, TabsList, TabsTrigger, FadeContent, TipCard } from "@/components";
 
 const careGuides = {
   basic: [

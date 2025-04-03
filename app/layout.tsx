@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 
-import { Header, Menu, PawBackground } from "@/components/";
+import { Header, Menu, PawBackground } from "@/components";
 
 export const metadata: Metadata = {
   title: "PetSocialNetwork",

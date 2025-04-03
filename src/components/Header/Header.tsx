@@ -1,9 +1,10 @@
-import { pets } from "@/data";
-import { Logo } from "@/components/Header/Logo";
-import { SearchForm } from "@/components/Header/SearchForm";
-import { UserOptionsPopover } from "@/components/Header/UserOptionsPopover";
-import { HeaderActions } from "@/components/Header/HeaderActions";
-import { HeaderHider } from "@/components/Header/HeaderHider";
+import { pets } from "@/placeholder/pets";
+
+import { HeaderActions } from "./HeaderActions";
+import { HeaderHider } from "./HeaderHider";
+import { Logo } from "./Logo";
+import { SearchForm } from "./SearchForm";
+import { UserOptionsPopover } from "./UserOptionsPopover";
 
 export function Header() {
   const currentPet = pets[0];

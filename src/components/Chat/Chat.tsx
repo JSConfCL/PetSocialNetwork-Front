@@ -1,7 +1,6 @@
+import { petsPost } from '@/placeholder/pets-post';
+import { MessageSquare, Search } from 'lucide-react';
 import React from 'react';
-import { MessageSquare, Search} from 'lucide-react';
-import { petsPost } from '@/data/pets-post';
-
 
 export default function Chat() {
   return (
