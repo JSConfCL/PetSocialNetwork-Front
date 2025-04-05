@@ -1,4 +1,6 @@
-export const petsPost = [
+import { Post } from '@/interfaces/post';
+
+export const petsPost: Post[] = [
   {
     id: 1,
     userName: "LuckyDog",
