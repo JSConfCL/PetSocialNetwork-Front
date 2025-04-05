@@ -1,6 +1,6 @@
 "use client";
 
-import { petsPost } from "@/data";
+import { petsPost } from "@/placeholder/pets-post";
 
 import { PetPost, FadeContent } from "@/components/";
 
