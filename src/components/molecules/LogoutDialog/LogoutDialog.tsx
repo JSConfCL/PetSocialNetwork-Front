@@ -1,4 +1,5 @@
 import {
+  ButtonVariants,
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -8,14 +9,13 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger
-} from "@/components/ui/alert-dialog";
-import { buttonVariants } from "@/components/ui/button";
+} from "@/components";
 
-type LogoutButtonProps = {
+type LogoutDialogProps = {
   onLogout: () => void;
 };
 
-export function LogoutButton({ onLogout }: LogoutButtonProps) {
+export function LogoutDialog({ onLogout }: LogoutDialogProps) {
   return (
     <AlertDialog>
       <AlertDialogTrigger className="w-full text-left">Cerrar sesión</AlertDialogTrigger>
@@ -26,7 +26,7 @@ export function LogoutButton({ onLogout }: LogoutButtonProps) {
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancelar</AlertDialogCancel>
-          <AlertDialogAction onClick={onLogout} className={buttonVariants({ variant: "destructive" })}>
+          <AlertDialogAction onClick={onLogout} className={ButtonVariants({ variant: "destructive" })}>
             Cerrar sesión
           </AlertDialogAction>
         </AlertDialogFooter>

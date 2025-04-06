@@ -8,7 +8,7 @@ import React, { useMemo, useState } from 'react';
 
 import { Input } from '@/components';
 
-export default function Chat() {
+export const Chat = () => {
 
   const [ selectedChat, setSelectedChat ] = useState<Post | null>(null);
   const [ filterValue, setFilterValue ] = useState<string>('');
@@ -90,3 +90,4 @@ export default function Chat() {
   );
 };
 
+export default Chat;

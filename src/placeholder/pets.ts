@@ -1,4 +1,4 @@
-import { Pet } from "@/interfaces/pet";
+import type { Pet } from "@/interfaces/pet";
 
 export const pets: Pet[] = [
   {

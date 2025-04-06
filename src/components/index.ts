@@ -1,29 +1,33 @@
+// shadcn
+export * from "./ui";
+
 // Animations
 export * from "./Animations/CountUp";
 export * from "./Animations/FadeContent";
 
-// Dashboard
-export * from "./Dashboard/PetPost";
+// Atoms
+export * from "./atoms/HeaderHider/HeaderHider";
+export * from "./atoms/Logo/Logo";
+export * from "./atoms/MenuItem/MenuItem";
+export * from "./atoms/PawBackground/PawBackground";
+export * from "./atoms/PlusButton/PlusButton";
 
-// AdoptionsSales
-export * from "./AdoptionsSales/AdoptionSalesCard";
+// Molecules
+export * from "./molecules/AdoptionSalesCard/AdoptionSalesCard";
+export * from "./molecules/HeaderActions/HeaderActions";
+export * from "./molecules/HeaderProfile/HeaderProfile";
+export * from "./molecules/LogoutDialog/LogoutDialog";
+export * from "./molecules/Menu/Menu";
+export * from "./molecules/PawCard/PawCard";
+export * from "./molecules/SearchBar/SearchBar";
+export * from "./molecules/ThemeSwitcher/ThemeSwitcher";
+export * from "./molecules/TipCard/TipCard";
 
-// Care
-export * from "./Care/TipCard";
+// Organisms
+export * from "./organisms/Header/Header";
+export * from "./organisms/Chat/Chat";
 
-// CenterPaws
-export * from "./CenterPaws/PawCard";
+// Templates
 
-// Menu
-export * from "./Menu/Menu";
-export * from "./Menu/MenuItem";
-
-// PawBackground
-export * from "./PawBackground";
-
-export * from "./Header/Header";
-
-export * from "./PawBackground";
-
-// Shadcn
-export * from "./ui";
+// Pages
+export * from "./pages/Feed/Feed";

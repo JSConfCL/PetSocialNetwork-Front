@@ -1,11 +1,11 @@
-import { Pet } from "@/interfaces/pet";
+import type { Pet } from "@/interfaces/pet";
 import { Heart, DollarSign } from "lucide-react";
 import Image from "next/image";
-import type { JSX } from "react";
+import type { ReactElement } from "react";
 
 import { Card, CountUp, Badge } from "@/components";
 
-export function AdoptionSalesCard(pet: Pet): JSX.Element {
+export const AdoptionSalesCard = (pet: Pet): ReactElement => {
   return (
     <Card key={pet.id} className="overflow-hidden hover:scale-[1.01]">
       <div className="relative h-64">
