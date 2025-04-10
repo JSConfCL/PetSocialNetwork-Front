@@ -1,15 +1,15 @@
-import { JSX } from "react";
+import type { ReactElement, ReactNode } from "react";
 
 import { Card } from "@/components/";
 
-type Tip = {
-  title: string;
+export interface TipCardProps {
   content: string;
+  icon: ReactNode;
   tips: string[];
-  icon: React.ReactNode;
-};
+  title: string;
+}
 
-export function TipCard(guide: Tip): JSX.Element {
+export function TipCard(guide: TipCardProps): ReactElement {
   return (
     <Card className="p-6 shadow-md">
       <div className="flex items-start gap-4">

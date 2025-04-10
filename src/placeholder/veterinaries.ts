@@ -1,4 +1,4 @@
-import { Veterinary } from "@/interfaces/veterinary";
+import type { Veterinary } from "@/interfaces/veterinary";
 
 export const veterinaries: Veterinary[] = [
   {

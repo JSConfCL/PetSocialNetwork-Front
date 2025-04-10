@@ -1,36 +1,38 @@
 "use client";
-import { Post } from '@/interfaces/post';
+
+import type { Post } from '@/interfaces/post';
 import { Heart, MessageCircle, PawPrint } from "lucide-react";
 import Image from 'next/image';
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
   Avatar,
   AvatarFallback,
   AvatarImage,
   Button,
-  Input,
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
   CountUp,
-  FadeContent
+  FadeContent,
+  Input,
 } from "@/components";
 
-export function PetPost({ post }: { post: Post }) {
-  const [likes, setLikes] = useState(post.likes);
-  const [comments, setComments] = useState(post.comments);
-  const [newComment, setNewComment] = useState("");
+export const Feed = (props: { post: Post }) => {
+  const { post } = props;
+  const [ likes, setLikes ] = useState(post.likes);
+  const [ comments, setComments ] = useState(post.comments);
+  const [ newComment, setNewComment ] = useState("");
 
   const handleLike = () => {
     setLikes(likes + 1);
-  };
+  }
 
-  const handleComment = (e: React.FormEvent) => {
+  const handleComment = (e: FormEvent) => {
     e.preventDefault();
 
-    if (newComment.trim()) {
+    if( newComment.trim() ){
       const comment = {
         id: comments.length + 1,
         userName: "CurrentUser", // Esto vendría del usuario autenticado
@@ -39,7 +41,7 @@ export function PetPost({ post }: { post: Post }) {
       setComments([...comments, comment]);
       setNewComment("");
     }
-  };
+  }
 
   return (
     <Card className="mx-auto w-full max-w-2xl text-purple-950 shadow-lg shadow-purple-100 dark:bg-[#10061d]/50 dark:text-purple-300 dark:shadow-purple-950/50">
@@ -122,3 +124,5 @@ export function PetPost({ post }: { post: Post }) {
     </Card>
   );
 }
+
+export default Feed;

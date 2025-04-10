@@ -8,7 +8,7 @@
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-interface CountUpProps {
+export interface CountUpProps {
   to: number;
   from?: number;
   direction?: "up" | "down";
@@ -21,18 +21,20 @@ interface CountUpProps {
   onEnd?: () => void;
 }
 
-export function CountUp({
-  to,
-  from = 0,
-  direction = "up",
-  delay = 0,
-  duration = 2, // Duration of the animation in seconds
-  className = "",
-  startWhen = true,
-  separator = "",
-  onStart,
-  onEnd
-}: CountUpProps) {
+export const CountUp = (props: CountUpProps) => {
+  const {
+    to,
+    from = 0,
+    direction = "up",
+    delay = 0,
+    duration = 2, // Duration of the animation in seconds
+    className = "",
+    startWhen = true,
+    separator = "",
+    onStart,
+    onEnd
+  } = props;
+
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(direction === "down" ? to : from);
 
@@ -102,3 +104,5 @@ export function CountUp({
 
   return <span className={`${className}`} ref={ref} />;
 }
+
+export default CountUp;

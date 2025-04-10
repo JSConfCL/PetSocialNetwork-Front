@@ -2,7 +2,7 @@
 
 import { petsPost } from "@/placeholder/pets-post";
 
-import { PetPost, FadeContent } from "@/components/";
+import { Feed, FadeContent } from "@/components/";
 import { Stories } from "@/components/Dashboard/Stories/Stories";
 
 export default function Home() {
@@ -12,9 +12,9 @@ export default function Home() {
 
       {petsPost.map((post) => (
         <FadeContent key={post.id} blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
-          <PetPost post={post} />
+          <Feed post={post} />
         </FadeContent>
-      ))}
+      )}
     </div>
   );
 }

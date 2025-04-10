@@ -5,30 +5,32 @@
 */
 "use client";
 
-import { useRef, useEffect, useState, ReactNode } from "react";
+import { useRef, useEffect, useState, type ReactNode } from "react";
 
 interface FadeContentProps {
-  children: ReactNode;
   blur?: boolean;
+  children: ReactNode;
+  className?: string;
+  delay?: number;
   duration?: number;
   easing?: string;
-  delay?: number;
-  threshold?: number;
   initialOpacity?: number;
-  className?: string;
+  threshold?: number;
 }
 
-export const FadeContent: React.FC<FadeContentProps> = ({
-  children,
-  blur = false,
-  duration = 1000,
-  easing = "ease-out",
-  delay = 0,
-  threshold = 0.1,
-  initialOpacity = 0,
-  className = ""
-}) => {
-  const [inView, setInView] = useState(false);
+export const FadeContent = (props: FadeContentProps) => {
+  const {
+    children,
+    blur = false,
+    duration = 1000,
+    easing = "ease-out",
+    delay = 0,
+    threshold = 0.1,
+    initialOpacity = 0,
+    className = ""
+  } = props;
+
+  const [ inView, setInView ] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

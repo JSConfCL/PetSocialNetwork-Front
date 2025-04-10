@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Chat from '@/components/Chat/Chat';
+import { Chat } from '@/components';
 
-export default function page() {
+export default function Page() {
   return (
     <>
      <Chat />

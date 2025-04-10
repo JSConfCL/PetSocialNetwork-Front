@@ -1,4 +1,4 @@
-import { Post } from '@/interfaces/post';
+import type { Post } from '@/interfaces/post';
 
 export const petsPost: Post[] = [
   {

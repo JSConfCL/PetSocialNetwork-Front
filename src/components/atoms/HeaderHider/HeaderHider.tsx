@@ -1,25 +1,23 @@
 "use client";
 
-import { PropsWithChildren, useEffect, useId } from "react";
+import { type PropsWithChildren, type ComponentProps, useEffect, useId } from "react";
 
-type HeaderHiderProps = PropsWithChildren<{ className?: string }>;
+export type HeaderHiderProps = ComponentProps<'div'> & PropsWithChildren;
 
-export function HeaderHider({ children, className }: HeaderHiderProps) {
+export const HeaderHider = (props: HeaderHiderProps) => {
+  const { children, ...otherProps } = props;
   const headerId = useId();
 
   useEffect(() => {
     let previousScrollPosition = window.scrollY;
 
-    function handleScroll() {
+    const handleScroll = () => {
       const currentScrollPosition = window.scrollY;
-
       const $header = document.getElementById(headerId);
 
-      if ($header === null) {
-        return;
-      }
+      if( !$header) return;
 
-      if (previousScrollPosition > currentScrollPosition) {
+      if( previousScrollPosition > currentScrollPosition ){
         $header.style.top = "0px";
       } else {
         $header.style.top = `-${$header.offsetHeight}px`;
@@ -29,13 +27,14 @@ export function HeaderHider({ children, className }: HeaderHiderProps) {
     }
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, [headerId]);
 
   return (
-    <div id={headerId} className={className}>
-      {children}
+    <div id={headerId} {...otherProps}>
+      { children }
     </div>
   );
 }
+
+export default HeaderHider;
