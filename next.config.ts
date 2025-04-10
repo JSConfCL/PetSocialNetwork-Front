@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       "s3.amazonaws.com",
       "www.purina.in",
       "pridebites.com",
+      "www.muyinteresante.com",
     ]
   }
 };
