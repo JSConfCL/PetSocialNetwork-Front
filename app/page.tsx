@@ -14,7 +14,7 @@ export default function Home() {
         <FadeContent key={post.id} blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
           <Feed post={post} />
         </FadeContent>
-      )}
+      ))}
     </div>
   );
 }
