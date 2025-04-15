@@ -1,4 +1,4 @@
-import { Veterinary } from "@/interfaces/veterinary";
+import { type Veterinary } from "@/interfaces/veterinary";
 import { Star, Clock, Phone } from "lucide-react";
 import Image from "next/image";
 import type { JSX } from "react";
