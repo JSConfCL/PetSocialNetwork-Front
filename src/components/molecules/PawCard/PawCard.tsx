@@ -32,7 +32,11 @@ export function PawCard(vet: Veterinary): JSX.Element {
             <div>
               {vet.schedule.map((schedule, index) => (
                 <p key={index} className="text-sm">
-                  <span className="font-medium">{schedule.days}:</span> {schedule.hours}
+                  <span className="font-medium">
+                    {schedule.days}
+                    {":"}
+                  </span>{" "}
+                  {schedule.hours}
                 </p>
               ))}
             </div>

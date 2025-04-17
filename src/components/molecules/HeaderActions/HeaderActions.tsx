@@ -1,6 +1,7 @@
-'use client';
+"use client";
 import { Bell, MessageCircle } from "lucide-react";
-import Link from "next/link";
+
+import { Link } from "@/i18n/navigation";
 
 import { CountUp, Button } from "@/components";
 
@@ -14,7 +15,7 @@ export const HeaderActions = () => (
     </Button>
     <Link
       href="/chat"
-      className="flex items-center text-sm rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring hover:bg-purple-200 dark:hover:bg-purple-950/50 h-9 px-3"
+      className="flex h-9 items-center rounded-lg px-3 text-sm font-medium transition-colors hover:bg-purple-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring dark:hover:bg-purple-950/50"
     >
       <MessageCircle className="h-5 w-5" />
     </Link>
@@ -22,4 +23,3 @@ export const HeaderActions = () => (
 );
 
 export default HeaderActions;
-

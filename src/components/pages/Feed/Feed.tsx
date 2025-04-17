@@ -1,8 +1,9 @@
 "use client";
 
-import type { Post } from '@/interfaces/post';
+import type { Post } from "@/interfaces/post";
 import { Heart, MessageCircle, PawPrint } from "lucide-react";
-import Image from 'next/image';
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
 
 import {
@@ -16,23 +17,25 @@ import {
   CardHeader,
   CountUp,
   FadeContent,
-  Input,
+  Input
 } from "@/components";
 
 export const Feed = (props: { post: Post }) => {
+  const t = useTranslations("Feed");
+
   const { post } = props;
-  const [ likes, setLikes ] = useState(post.likes);
-  const [ comments, setComments ] = useState(post.comments);
-  const [ newComment, setNewComment ] = useState("");
+  const [likes, setLikes] = useState(post.likes);
+  const [comments, setComments] = useState(post.comments);
+  const [newComment, setNewComment] = useState("");
 
   const handleLike = () => {
     setLikes(likes + 1);
-  }
+  };
 
   const handleComment = (e: FormEvent) => {
     e.preventDefault();
 
-    if( newComment.trim() ){
+    if (newComment.trim()) {
       const comment = {
         id: comments.length + 1,
         userName: "CurrentUser", // Esto vendría del usuario autenticado
@@ -41,7 +44,7 @@ export const Feed = (props: { post: Post }) => {
       setComments([...comments, comment]);
       setNewComment("");
     }
-  }
+  };
 
   return (
     <Card className="mx-auto w-full max-w-2xl text-purple-950 shadow-lg shadow-purple-100 dark:bg-[#10061d]/50 dark:text-purple-300 dark:shadow-purple-950/50">
@@ -71,13 +74,17 @@ export const Feed = (props: { post: Post }) => {
 
         <div className="flex items-center">
           <div className="mt-2 flex w-full items-center space-x-2 text-purple-500">
-            <Button variant="ghost" onClick={handleLike} className="hover:bg-purple-100 dark:hover:bg-purple-950/40 hover:text-purple-700">
+            <Button
+              variant="ghost"
+              onClick={handleLike}
+              className="hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-950/40"
+            >
               <Heart className="mr-1 h-4 w-4" />
 
               <CountUp from={0} to={likes} separator="." direction="up" duration={1} className="count-up-text" />
             </Button>
 
-            <Button variant="ghost" className="hover:bg-purple-100 dark:hover:bg-purple-950/40 hover:text-purple-700">
+            <Button variant="ghost" className="hover:bg-purple-100 hover:text-purple-700 dark:hover:bg-purple-950/40">
               <MessageCircle className="mr-1 h-4 w-4" />
 
               <CountUp
@@ -91,7 +98,7 @@ export const Feed = (props: { post: Post }) => {
             </Button>
           </div>
 
-          <span className="flex w-full justify-end text-[13px] text-purple-500">Hace 10 horas</span>
+          <span className="flex w-full justify-end text-[13px] text-purple-500">{t("timeAgo", { hours: 10 })}</span>
         </div>
       </CardContent>
 
@@ -100,7 +107,10 @@ export const Feed = (props: { post: Post }) => {
           {comments.map((comment) => (
             <FadeContent key={comment.id} blur={false} duration={1000} easing="ease-out" initialOpacity={0}>
               <div className="mb-2">
-                <span className="font-semibold">{comment.userName}: </span>
+                <span className="font-semibold">
+                  {comment.userName}
+                  {":"}{" "}
+                </span>
                 {comment.content}
               </div>
             </FadeContent>
@@ -110,7 +120,7 @@ export const Feed = (props: { post: Post }) => {
         <form onSubmit={handleComment} className="flex w-full space-x-2">
           <Input
             type="text"
-            placeholder="Añade un comentario..."
+            placeholder={t("addCommentInputPlaceholder")}
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             className="flex-grow border-purple-700 text-purple-700"
@@ -123,6 +133,6 @@ export const Feed = (props: { post: Post }) => {
       </CardFooter>
     </Card>
   );
-}
+};
 
 export default Feed;

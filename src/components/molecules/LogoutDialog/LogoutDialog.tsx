@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import {
   ButtonVariants,
   AlertDialog,
@@ -16,18 +18,20 @@ type LogoutDialogProps = {
 };
 
 export function LogoutDialog({ onLogout }: LogoutDialogProps) {
+  const t = useTranslations("LogoutDialog");
+
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="w-full text-left">Cerrar sesión</AlertDialogTrigger>
+      <AlertDialogTrigger className="w-full text-left">{t("trigger")}</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>¿Quieres cerrar sesión?</AlertDialogTitle>
-          <AlertDialogDescription>Selecciona una opción</AlertDialogDescription>
+          <AlertDialogTitle>{t("title")}</AlertDialogTitle>
+          <AlertDialogDescription>{t("description")}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancelar</AlertDialogCancel>
+          <AlertDialogCancel>{t("cancel")}</AlertDialogCancel>
           <AlertDialogAction onClick={onLogout} className={ButtonVariants({ variant: "destructive" })}>
-            Cerrar sesión
+            {t("trigger")}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

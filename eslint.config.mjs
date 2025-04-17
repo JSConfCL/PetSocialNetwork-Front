@@ -17,6 +17,21 @@ const eslintConfig = [
       "import-helpers": importHelpers
     },
     rules: {
+      // Avoid hardcoded labels - https://next-intl.dev/docs/workflows/linting#avoid-hardcoded-labels-in-component-markup
+      "react/jsx-no-literals": "error",
+      // Consistently import navigation APIs from `@/i18n/navigation` - https://next-intl.dev/docs/workflows/linting#consistent-usage-of-navigation-apis
+      "no-restricted-imports": [
+        "error",
+        {
+          name: "next/link",
+          message: "Please import from `@/i18n/navigation` instead."
+        },
+        {
+          name: "next/navigation",
+          importNames: ["redirect", "permanentRedirect", "useRouter", "usePathname"],
+          message: "Please import from `@/i18n/navigation` instead."
+        }
+      ],
       "import-helpers/order-imports": [
         "error",
         {
