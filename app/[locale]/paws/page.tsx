@@ -1,14 +1,17 @@
 "use client";
 
 import { veterinaries } from "@/placeholder/veterinaries";
+import { useTranslations } from "next-intl";
 
 import { FadeContent, PawCard } from "@/components";
 
 export default function PawsPage() {
+  const t = useTranslations("PawsPage");
+
   return (
     <main className="min-h-screen bg-transparent">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="mb-8 text-3xl font-bold">Centro de Patitas 🏥</h1>
+        <h1 className="mb-8 text-3xl font-bold">{t("title")}</h1>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Mapa */}

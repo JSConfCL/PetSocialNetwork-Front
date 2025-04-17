@@ -1,0 +1,75 @@
+{
+  "PawsPage": {
+    "title": "Centro de Patinhas 🏥"
+  },
+  "Menu": {
+    "menu": "Menu",
+    "dashboard": "Painel",
+    "littlePawsCenter": "Centro de Patinhas",
+    "adoptionsAndSales": "Adoções e Vendas",
+    "guideAndTips": "Guia e Dicas"
+  },
+  "Feed": {
+    "timeAgo": "Há {hours, plural, =1 {# hora} other {# horas}}",
+    "addCommentInputPlaceholder": "Adicione um comentário..."
+  },
+  "Chat": {
+    "title": "Conversas",
+    "searchInputPlaceholder": "Procure entre seus contatos...",
+    "selectAChat": "Selecione uma conversa",
+    "chooseConversation": "Escolha entre suas conversas existentes"
+  },
+  "ThemeSwitcher": {
+    "label": "Tema",
+    "lightLabel": "Claro",
+    "darkLabel": "Escuro",
+    "systemLabel": "Sistema"
+  },
+  "LogoutDialog": {
+    "trigger": "Sair",
+    "title": "Você quer sair?",
+    "description": "Selecione uma opção",
+    "cancel": "Cancelar"
+  },
+  "HeaderProfile": {
+    "profileConfiguration": "Configuração de Perfil",
+    "privacyConfiguration": "Configuração de Privacidade"
+  },
+  "AdoptionsSalesPage": {
+    "title": "Adoções e Vendas 🏠"
+  },
+  "AdoptionSalesCard": {
+    "personality": "Personalidade",
+    "price": "Preço"
+  },
+  "Logo": {
+    "label": "PetSocial"
+  },
+  "PrivacySettingsPage": {
+    "pageTitle": "Configurações de Privacidade",
+    "pageDescription": "Ajuste suas preferências de privacidade abaixo",
+    "enableEmailNotifications": "Ativar notificações por e-mail",
+    "profileVisibility": {
+      "label": "Visibilidade do perfil",
+      "public": "Público",
+      "private": "Privado",
+      "friends": "Amigos"
+    },
+    "showMyActivity": "Mostrar meu status de atividade",
+    "whoCanSendMeMessages": {
+      "label": "Quem pode me enviar mensagens diretas",
+      "everyone": "Todos",
+      "friends": "Apenas amigos",
+      "noOne": "Ninguém"
+    },
+    "saveButton": "Salvar alterações"
+  },
+  "CarePage": {
+    "title": "Guia de Cuidados 🐾",
+    "tabs": {
+      "basicTrigger": "Cuidados Básicos",
+      "healthTrigger": "Saúde",
+      "trainingTrigger": "Treinamento"
+    }
+  }
+}

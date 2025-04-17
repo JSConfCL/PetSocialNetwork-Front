@@ -1,0 +1,75 @@
+{
+  "PawsPage": {
+    "title": "Little Paws Center 🏥"
+  },
+  "Menu": {
+    "menu": "Menu",
+    "dashboard": "Dashboard",
+    "littlePawsCenter": "Little Paws Center",
+    "adoptionsAndSales": "Adoptions and Sales",
+    "guideAndTips": "Guide and Tips"
+  },
+  "Feed": {
+    "timeAgo": "{hours, plural, =1 {# hour ago} other {# hours ago}}",
+    "addCommentInputPlaceholder": "Add a comment..."
+  },
+  "Chat": {
+    "title": "Chats",
+    "searchInputPlaceholder": "Search your contacts...",
+    "selectAChat": "Select a chat",
+    "chooseConversation": "Choose from your existing conversations"
+  },
+  "ThemeSwitcher": {
+    "label": "Theme",
+    "lightLabel": "Light",
+    "darkLabel": "Dark",
+    "systemLabel": "System"
+  },
+  "LogoutDialog": {
+    "trigger": "Log out",
+    "title": "Do you want to log out?",
+    "description": "Choose an option",
+    "cancel": "Cancel"
+  },
+  "HeaderProfile": {
+    "profileConfiguration": "Profile Settings",
+    "privacyConfiguration": "Privacy Settings"
+  },
+  "AdoptionsSalesPage": {
+    "title": "Adoptions and Sales 🏠"
+  },
+  "AdoptionSalesCard": {
+    "personality": "Personality",
+    "price": "Price"
+  },
+  "Logo": {
+    "label": "PetSocial"
+  },
+  "PrivacySettingsPage": {
+    "pageTitle": "Privacy Settings",
+    "pageDescription": "Adjust your privacy preferences below",
+    "enableEmailNotifications": "Enable email notifications",
+    "profileVisibility": {
+      "label": "Profile visibility",
+      "public": "Public",
+      "private": "Private",
+      "friends": "Friends"
+    },
+    "showMyActivity": "Show my activity status",
+    "whoCanSendMeMessages": {
+      "label": "Who can send me direct messages",
+      "everyone": "Everyone",
+      "friends": "Friends only",
+      "noOne": "No one"
+    },
+    "saveButton": "Save changes"
+  },
+  "CarePage": {
+    "title": "Care Guide 🐾",
+    "tabs": {
+      "basicTrigger": "Basic Care",
+      "healthTrigger": "Health",
+      "trainingTrigger": "Training"
+    }
+  }
+}

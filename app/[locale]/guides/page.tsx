@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, Shield, Stethoscope, Dumbbell, Bath, Apple } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger, FadeContent, TipCard } from "@/components";
 
@@ -68,16 +69,18 @@ const careGuides = {
 };
 
 export default function CarePage() {
+  const t = useTranslations("CarePage");
+
   return (
     <main className="min-h-screen bg-transparent">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="mb-8 text-3xl font-bold">Guía de Cuidados 🐾</h1>
+        <h1 className="mb-8 text-3xl font-bold">{t("title")}</h1>
 
         <Tabs defaultValue="basic" className="space-y-6">
           <TabsList className="grid w-full grid-cols-3 bg-purple-100 dark:bg-purple-950">
-            <TabsTrigger value="basic">Cuidados Básicos</TabsTrigger>
-            <TabsTrigger value="health">Salud</TabsTrigger>
-            <TabsTrigger value="training">Entrenamiento</TabsTrigger>
+            <TabsTrigger value="basic">{t("tabs.basicTrigger")}</TabsTrigger>
+            <TabsTrigger value="health">{t("tabs.healthTrigger")}</TabsTrigger>
+            <TabsTrigger value="training">{t("tabs.trainingTrigger")}</TabsTrigger>
           </TabsList>
 
           <TabsContent value="basic" className="space-y-6">

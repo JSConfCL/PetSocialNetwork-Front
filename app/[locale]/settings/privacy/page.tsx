@@ -1,7 +1,10 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function PrivacySettingsPage() {
+  const t = useTranslations("PrivacySettingsPage");
+
   const [emailNotifications, setEmailNotifications] = useState(false);
   const [profileVisibility, setProfileVisibility] = useState("public");
   const [activityStatus, setActivityStatus] = useState(true);
@@ -13,8 +16,8 @@ export default function PrivacySettingsPage() {
 
   return (
     <div className="mx-auto max-w-2xl rounded-lg p-6 shadow-md">
-      <h1 className="mb-4 text-2xl font-bold text-purple-800">Configuración de Privacidad</h1>
-      <p className="mb-6 text-purple-600">Ajusta tus preferencias de privacidad a continuación:</p>
+      <h1 className="mb-4 text-2xl font-bold text-purple-800">{t("pageTitle")}</h1>
+      <p className="mb-6 text-purple-600">{`${t("pageDescription")}:`}</p>
 
       <div className="mb-4">
         <label className="flex items-center space-x-3">
@@ -24,20 +27,20 @@ export default function PrivacySettingsPage() {
             onChange={(e) => setEmailNotifications(e.target.checked)}
             className="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
           />
-          <span className="text-purple-700">Habilitar notificaciones por correo</span>
+          <span className="text-purple-700">{t("enableEmailNotifications")}</span>
         </label>
       </div>
 
       <div className="mb-4">
-        <label className="mb-2 block font-medium text-purple-700">Visibilidad del perfil:</label>
+        <label className="mb-2 block font-medium text-purple-700">{`${t("profileVisibility.label")}:`}</label>
         <select
           value={profileVisibility}
           onChange={(e) => setProfileVisibility(e.target.value)}
           className="block w-full rounded-md border border-purple-500 px-3 py-2 shadow-sm focus:border-purple-500 focus:outline-none focus:ring-purple-500 sm:text-sm"
         >
-          <option value="public">Público</option>
-          <option value="private">Privado</option>
-          <option value="friends">Solo amigos</option>
+          <option value="public">{t("profileVisibility.public")}</option>
+          <option value="private">{t("profileVisibility.private")}</option>
+          <option value="friends">{t("profileVisibility.friends")}</option>
         </select>
       </div>
 
@@ -49,20 +52,20 @@ export default function PrivacySettingsPage() {
             onChange={(e) => setActivityStatus(e.target.checked)}
             className="h-5 w-5 rounded border-gray-300 text-purple-600 focus:ring-purple-500"
           />
-          <span className="text-purple-700">Mostrar mi estado de actividad</span>
+          <span className="text-purple-700">{t("showMyActivity")}</span>
         </label>
       </div>
 
       <div className="mb-4">
-        <label className="mb-2 block font-medium text-purple-700">Quién puede enviarme mensajes directos:</label>
+        <label className="mb-2 block font-medium text-purple-700">{`${t("whoCanSendMeMessages.label")}:`}</label>
         <select
           value={directMessages}
           onChange={(e) => setDirectMessages(e.target.value)}
           className="block w-full rounded-md border border-purple-500 px-3 py-2 shadow-sm focus:border-purple-500 focus:outline-none focus:ring-purple-500 sm:text-sm"
         >
-          <option value="everyone">Todos</option>
-          <option value="friends">Solo amigos</option>
-          <option value="noone">Nadie</option>
+          <option value="everyone">{t("whoCanSendMeMessages.everyone")}</option>
+          <option value="friends">{t("whoCanSendMeMessages.friends")}</option>
+          <option value="noOne">{t("whoCanSendMeMessages.noOne")}</option>
         </select>
       </div>
 
@@ -71,7 +74,7 @@ export default function PrivacySettingsPage() {
           onClick={handleSave}
           className="w-full rounded-md border border-purple-700 bg-purple-600 px-4 py-2 text-purple-700 shadow hover:bg-purple-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:bg-purple-500 dark:text-white dark:hover:bg-purple-600 dark:focus:ring-purple-400"
         >
-          Guardar cambios
+          {t("saveButton")}
         </button>
       </div>
     </div>

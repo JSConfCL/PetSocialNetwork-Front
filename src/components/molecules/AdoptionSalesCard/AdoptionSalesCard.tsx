@@ -1,11 +1,14 @@
 import type { Pet } from "@/interfaces/pet";
 import { Heart, DollarSign } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import type { ReactElement } from "react";
 
 import { Card, CountUp, Badge } from "@/components";
 
 export const AdoptionSalesCard = (pet: Pet): ReactElement => {
+  const t = useTranslations("AdoptionSalesCard");
+
   return (
     <Card key={pet.id} className="overflow-hidden hover:scale-[1.01]">
       <div className="relative h-64">
@@ -31,13 +34,13 @@ export const AdoptionSalesCard = (pet: Pet): ReactElement => {
 
         <div className="space-y-3">
           <div>
-            <span className="font-medium">Personalidad:</span>{" "}
+            <span className="font-medium">{`${t("personality")}:`}</span>{" "}
             <span className="text-muted-foreground">{pet.personality}</span>
           </div>
 
           {pet.status === "sale" && pet.price && (
             <div className="flex items-center text-lg font-medium">
-              Precio:
+              {`${t("price")}:`}
               <span className="ml-2 flex items-center">
                 <DollarSign className="h-4 w-4" />
 
@@ -47,10 +50,10 @@ export const AdoptionSalesCard = (pet: Pet): ReactElement => {
           )}
 
           <div className="rounded-lg bg-gray-100 p-4 text-sm italic text-purple-500 dark:bg-gray-950">
-            &quot;{pet.message}&quot;
+            {`"${pet.message}"`}
           </div>
         </div>
       </div>
     </Card>
   );
-}
+};
