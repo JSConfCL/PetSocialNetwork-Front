@@ -17,13 +17,16 @@ export const MenuItem = (props: MenuItemProps): ReactElement => {
     'dark:text-purple-300',
     'flex',
     'gap-2',
+    'hover:scale-[1.05]',
     'hover:bg-purple-100',
     'hover:text-purple-700',
     'items-center',
     'p-2',
     'rounded-md',
     'text-purple-500',
-    'transition-colors',
+    'transition-all',
+    'duration-300',
+    'ease-in-out',
     isActive && 'bg-purple-200 text-purple-700 dark:bg-purple-950/50 dark:text-purple-300',
   ]);
 
